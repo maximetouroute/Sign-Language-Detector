@@ -1,6 +1,6 @@
 # Sign Language Detect
 
-This project was developped as part of a Computer Vision course to demonstrate the workflow of a basic machine learning approach. In a single app, you can train your computer to recognize your own hand signs language, and launch an automatic hand sign language recogniser based on your training data.
+This project was developped as part of a Computer Vision course to demonstrate the workflow of a basic machine learning approach. In a single app, you can train your computer to recognize your own hand signs language, and launch an automatic hand signs language recogniser based on your training data.
 
 # How to use the app
 * Find a well lit room with a uniform background
@@ -57,7 +57,7 @@ make
 ## Algorithm flow for Hand Detection
 
 * Face detection is made through a Haar Cascade detector
-* once the face is detected, skin color is analyzed to set-up a tracking algorithm based on skin color (very fast)
+* once the face is detected, skin color is analyzed to set-up a tracking algorithm based on skin color
 * the tracking algorithm tracks the skin face once, then moves its track area to find the left hand
 * if the hand is lost, the algorithm restarts
 
@@ -70,9 +70,9 @@ make
 
 ## Algorithm Flow for Recognition Mode
 
- * The neural network is trained based on your dataset, and loaded back in the app as a predictor
+ * The neural network is trained with your dataset, and loaded back in the app as a predictor
  * prediction is executed on the video stream every 10 frames
- * the recognized letter is displayed on the upper-right of the viewport
+ * the recognized letter is displayed on the upper-right corner of the viewport
 
 
 # Code structure
