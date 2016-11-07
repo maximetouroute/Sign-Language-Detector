@@ -1,1 +1,7 @@
 *.txt
+Main
+TrainNetwork
+*.xml
+Makefile
+*.cmake
+CMakeFiles/

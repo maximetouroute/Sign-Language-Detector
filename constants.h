@@ -33,3 +33,11 @@ int PROGRAM_MODE;
 char letterDisplayed = '.';
 int frameCounter = 0;
 string cascadeName = "./data/cascades/haarcascade_frontalcatface.xml";
+
+#ifdef __APPLE__
+const char *SCRIPT_SHUFFLE_PATH = "./scripts/osx/shuffle.sh";
+const char *SCRIPT_BRACKET_REMOVER_PATH = "./scripts/osx/bracketRemover.sh";
+#else
+const char *SCRIPT_SHUFFLE_PATH = "./scripts/linux/shuffle.sh";
+const char *SCRIPT_BRACKET_REMOVER_PATH = "./scripts/linux/bracketRemover.sh";
+#endif

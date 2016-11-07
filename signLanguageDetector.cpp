@@ -41,7 +41,7 @@ void dilateMask(Mat& mask, int dilationSize)
 
 void initNeuralData()
 {
-    theNeuralData.mlp.load("./data/neural/letter_recog.xml");
+    theNeuralData.mlp.load("./data/neural/neuralData.xml");
     theNeuralData.classCount = 26;
     SCREENSHOT_VALUE = 0;
 }
@@ -88,7 +88,7 @@ void recognize(cv::Mat frame, struct camshiftData& data)
     CvANN_MLP mlp;
     const int classCount = 26;
 
-    mlp.load("./data/neural/letter_recog.xml");
+    mlp.load("./data/neural/neuralData.xml");
 
     // expand trackWindow
     int newX = data.trackWindow.x - TRACKWINDOW_OFFSET;
@@ -139,8 +139,8 @@ void exportLetterInTrainingFile(cv::Mat& m, const char letter)
     os << frame << std::endl;
     os.close();
     // format and shuffle data
-    system("./data/neural/bracketRemover.sh");
-    system("./data/neural/shuffle.sh");
+    system(SCRIPT_BRACKET_REMOVER_PATH);
+    system(SCRIPT_SHUFFLE_PATH);
     printf("exported");
 }
 

@@ -16,6 +16,7 @@ static void help()
 
 int main( int argc, const char** argv )
 {
+    system("./scripts/init.sh");
     CvCapture* capture = 0;
     Mat frame, frameCopy, image;
 
@@ -133,7 +134,7 @@ int main( int argc, const char** argv )
         {
             if ( PROGRAM_MODE == SIGN_TRAINING_MODE )
             {
-                system("./trainNetwork.sh");
+                system("./scripts/trainNetwork.sh");
                 // Neural network data must exist
                 if( access( "./data/neural/neuralData.xml", F_OK ) != -1 ) 
                 {
