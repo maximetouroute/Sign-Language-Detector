@@ -22,7 +22,7 @@ The UI is a simple overlay of your webcam video stream. Once I make a hand sign 
 
 When doing so, the app creates a mask of the image based your skin tones
 
-![](https://github.com/maximetouroute/Sign-Language-Detector/blob/master/img/backproj_full_B.jpg)
+![](https://github.com/maximetouroute/Sign-Language-Detector/blob/master/img/backproj_full_B.png)
 
 By pressing repeating the process, I generate training dataset for the neural network. Here's what a train dataset for the letters B, C, and K looks like :
 
