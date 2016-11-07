@@ -1,4 +1,4 @@
-# Sign Language Detect
+# Sign Language Detector
 
 This project was developped as part of a Computer Vision course to demonstrate the workflow of a basic machine learning approach. In a single app, you can train your computer to recognize your own hand sign language and launch an automatic hand sign language recogniser based on your training data.
 
