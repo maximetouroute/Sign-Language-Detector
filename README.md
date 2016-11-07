@@ -1,6 +1,6 @@
 # Sign Language Detect
 
-This project was developped as part of a Computer Vision course to demonstrate the workflow of a basic machine learning approach. In a single app, you can train your computer to recognize your own hand signs language, and launch an automatic hand signs language recogniser based on your training data.
+This project was developped as part of a Computer Vision course to demonstrate the workflow of a basic machine learning approach. In a single app, you can train your computer to recognize your own hand sign language and launch an automatic hand sign language recogniser based on your training data.
 
 # How to use the app
 * Find a well lit room with a uniform background
@@ -29,7 +29,7 @@ Repeat the process to generate a training dataset for the neural network. Here's
 ![](https://github.com/maximetouroute/Sign-Language-Detector/blob/master/img/backprojs_C.jpg)
 ![](https://github.com/maximetouroute/Sign-Language-Detector/blob/master/img/backprojs_K.jpg)
 
-Once the dataset is created, press [SPACE] to train the neural network and switch to recognition mode. You can test the efficiency of your dataset immediately :
+Once the dataset is created press [SPACE] to train the neural network and switch to recognition mode. You can test the efficiency of your dataset immediately :
 
 ![](https://github.com/maximetouroute/Sign-Language-Detector/blob/master/img/recog_B.png)
 
@@ -77,6 +77,6 @@ make
 
 # Code structure
 
-code is intentionnaly structured by course chapters, in a chain architecture
+code is intentionnaly structured by course chapters in a chain architecture
 
 Main ---> Language Detection (Chapter 3) --> Camshift (Chapter 2) ---> FaceDetect (Chapter 1)
