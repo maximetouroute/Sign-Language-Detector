@@ -5,7 +5,7 @@ This project was developped as part of a Computer Vision course to demonstrate t
 # How to use the app
 * Find a place well lit with a uniform background
 * Launch the app and put your left hand at the same height of your head. The app will try to detect it.
-  * You can press [TAB] to reset the detection if it failed
+  * You can press [TAB] to reset the detection if it fails
 * make a hand sign, and press the corresponding alphabet letter to generate a training set
   * The default app expects you to train four letters.
 * To make your neural network as robust as possible, repeat the operation multiple times for each letter
@@ -18,21 +18,21 @@ This project was developped as part of a Computer Vision course to demonstrate t
 
 The UI is a simple overlay of your webcam video stream. Once I make a hand sign and press the corresponding letter, the trained letter is displayed in the upper-right corner
 
-![](https://github.com/maximetouroute/Video-Stabilisation-For-Soccer-Game/blob/master/img/train_B.png)
+![](https://github.com/maximetouroute/Sign-Language-Detector/blob/master/img/train_B.png)
 
 When doing so, the app creates a mask of the image based your skin tones
 
-![](https://github.com/maximetouroute/Video-Stabilisation-For-Soccer-Game/blob/master/img/backproj_full_B.png)
+![](https://github.com/maximetouroute/Sign-Language-Detector/blob/master/img/backproj_full_B.jpg)
 
 By pressing repeating the process, I generate training dataset for the neural network. Here's what a train dataset for the letters B, C, and K looks like :
 
-![](https://github.com/maximetouroute/Video-Stabilisation-For-Soccer-Game/blob/master/img/backprojs_B.png)
-![](https://github.com/maximetouroute/Video-Stabilisation-For-Soccer-Game/blob/master/img/backprojs_C.png)
-![](https://github.com/maximetouroute/Video-Stabilisation-For-Soccer-Game/blob/master/img/backprojs_K.png)
+![](https://github.com/maximetouroute/Sign-Language-Detector/blob/master/img/backprojs_B.jpg)
+![](https://github.com/maximetouroute/Sign-Language-Detector/blob/master/img/backprojs_C.jpg)
+![](https://github.com/maximetouroute/Sign-Language-Detector/blob/master/img/backprojs_K.jpg)
 
 Once this dataset is created, pressing [SPACE] trains the neural network, and use it for recognition. You can test the efficiency of your dataset immediately :  
 
-![](https://github.com/maximetouroute/Video-Stabilisation-For-Soccer-Game/blob/master/img/backprojs_K.png)
+![](https://github.com/maximetouroute/Video-Stabilisation-For-Soccer-Game/blob/master/img/recog_B.jpg)
 
 # How to use it
 
@@ -45,13 +45,11 @@ brew install gnu-sed
 
 * Linux and osx :
 Execute those commands to launch the app
-‘‘‘
+```
 cmake .
 make
 ./Main
-‘‘‘
-
-
+```
 
 # Algorithms Flow
 
@@ -61,9 +59,6 @@ make
 * once the face is detected, skin color is analyzed to set-up a tracking algorithm based on skin color (very fast)
 * the tracking algorithm tracks the skin face once, then moves its track area to find the left hand
 * if the hand is lost, the algorithm restarts
-
- ---- Hit [SPACE] to switch between SIGN_TRAINING_MODE and SIGN_RECOGNITION_MODE
- ---- Hit [TAB] to reset the algorithm if camshift tracking is lost
 
 ## Algorithm Flow for Training Mode
 
