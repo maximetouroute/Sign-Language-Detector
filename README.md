@@ -32,7 +32,7 @@ By pressing repeating the process, I generate training dataset for the neural ne
 
 Once this dataset is created, pressing [SPACE] trains the neural network, and use it for recognition. You can test the efficiency of your dataset immediately :  
 
-![](https://github.com/maximetouroute/Video-Stabilisation-For-Soccer-Game/blob/master/img/recog_B.jpg)
+![](https://github.com/maximetouroute/Sign-Language-Detector/blob/master/img/recog_B.png)
 
 # How to use it
 
